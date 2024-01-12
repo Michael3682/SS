@@ -133,7 +133,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
-    animation: rotate 15s linear infinite;
+    animation: rotate 5s linear infinite;
 }
 .bg:nth-child(2) .planet {
     width: 40px;
@@ -145,7 +145,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
-    animation: rotate 15s linear infinite;
+    animation: rotate 5s linear infinite;
 }
 .bg:nth-child(3) .planet {
     width: 40px;
@@ -157,7 +157,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
-    animation: rotate 15s linear infinite;
+    animation: rotate 5s linear infinite;
 }
 .bg:nth-child(4) .planet {
     width: 23px;
@@ -169,7 +169,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
-    animation: rotate 15s linear infinite;
+    animation: rotate 5s linear infinite;
 }
 .bg:nth-child(5) .planet {
     width: 70px;
@@ -181,7 +181,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
-    animation: rotate 15s linear infinite;
+    animation: rotate 5s linear infinite;
 }
 .bg:nth-child(6) .planet {
     width: 55px;
@@ -191,7 +191,7 @@ body {
     left: 870px;
     background-color: bisque;
     border-radius: 50%;
-    animation: rotate 15s linear infinite;
+    animation: rotate 5s linear infinite;
 }
 .bg2 {
     width: 70px;
@@ -200,7 +200,7 @@ body {
     position: absolute;
     top: -15px;
     left: -15px;
-    animation: rotate 8s linear infinite;
+    animation: rotate 15s linear infinite;
 }
 .moon {
     width: 15px;
