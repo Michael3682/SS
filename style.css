@@ -2,6 +2,16 @@ body {
     background-color: rgb(22, 22, 22);
     overflow: hidden;
 }
+button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    width: 50px;
+    height: 50px;
+    z-index: 20;
+}
 .sun {
     width: 150px;
     height: 150px;
@@ -11,7 +21,20 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: inset 5px 5px 25px 5px rgb(90, 90, 0);
+    z-index: 2;
+}
+.ast {
+    width: 785px;
+    height: 785px;
+    border-radius: 50%;
+    background-image: url('https://ultraalkaline.github.io/oursolarsystem/images/asteroid_belt.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -315px;
+    left: -315px;
+    animation: rotate 25s linear infinite;
+    z-index: 1;
 }
 .rad {
     width: 150px;
@@ -23,6 +46,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     filter: blur(10px);
+    z-index: 3;
 }
 .bg:nth-child(1) {
     width: 250px;
@@ -34,6 +58,15 @@ body {
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 5s linear infinite;
+    & .planet {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 110px;
+        left: 238px;
+        background-color: #a97c50;
+        border-radius: 50%;
+    }
 }
 .bg:nth-child(2) {
     width: 350px;
@@ -45,6 +78,15 @@ body {
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 10s linear infinite;
+    & .planet {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 150px;
+        left: 330px;
+        background-color: #fe9738;
+        border-radius: 50%;
+    }
 }
 .bg:nth-child(3) {
     width: 450px;
@@ -56,6 +98,33 @@ body {
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 15s linear infinite;
+    & .planet {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 200px;
+        left: 430px;
+        background-color: #89c8fd;
+        border-radius: 50%;
+        & .b2 {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            animation: rotate 5s linear infinite;
+            & .moon {
+                width: 15px;
+                height: 15px;
+                background-color: #8a8f92;
+                position: absolute;
+                top: 28px;
+                left: 65px;
+                border-radius: 50%;
+            }
+        }
+    }
 }
 .bg:nth-child(4) {
     width: 550px;
@@ -67,151 +136,95 @@ body {
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 20s linear infinite;
+    & .planet {
+        width: 23px;
+        height: 23px;
+        position: absolute;
+        top: 261px;
+        left: 539px;
+        background-color: #b93c28;
+        border-radius: 50%;
+    }
 }
 .bg:nth-child(5) {
-    width: 700px;
-    height: 700px;
+    width: 800px;
+    height: 800px;
     position: absolute;
-    top: -275px;
-    left: -275px;
+    top: -321px;
+    left: -321px;
     background-color: transparent;
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 25s linear infinite;
+    & .planet {
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        top: 353px;
+        left: 760px;
+        background-color: #f7a539;
+        border-radius: 50%;
+    }
 }
 .bg:nth-child(6) {
-    width: 900px;
-    height: 900px;
+    width: 985px;
+    height: 985px;
     position: absolute;
-    top: -375px;
-    left: -375px;
+    top: -411.8px;
+    left: -411.8px;
     background-color: transparent;
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 30s linear infinite;
+    & .planet {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 455px;
+        left: 957px;
+        background-color: bisque;
+        border-radius: 50%;
+    }
 }
-/* .bg:nth-child(7) {
-    width: 850px;
-    height: 850px;
+.bg:nth-child(7) {
+    width: 1130px;
+    height: 1130px;
     position: absolute;
-    top: -351px;
-    left: -351px;
+    top: -485px;
+    left: -485px;
     background-color: transparent;
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
-    animation: rotate 35 linear infinite;
-} */
-/* .bg:nth-child(8) {
-    width: 950px;
-    height: 950px;
+    animation: rotate 35s linear infinite;
+    & .planet {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 535px;
+        left: 1110px;
+        background-color: lightblue;
+        border-radius: 50%;
+    }
+}
+.bg:nth-child(8) {
+    width: 1250px;
+    height: 1250px;
     position: absolute;
-    top: -401px;
-    left: -401px;
+    top: -545px;
+    left: -545px;
     background-color: transparent;
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
-    animation: rotate 40 linear infinite;
-} */
-/* .bg:nth-child(9) {
-    width: 1050px;
-    height: 1050px;
-    position: absolute;
-    top: -451px;
-    left: -451px;
-    background-color: transparent;
-    border: 1px solid rgb(255, 255, 255, 0.5);
-    border-radius: 50%;
-    animation: rotate 45 linear infinite;
-} */
-.bg:nth-child(1) .planet {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 110px;
-    left: 238px;
-    background-image: url("https://cdn-icons-png.flaticon.com/512/2739/2739612.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    animation: rotate 5s linear infinite;
-}
-.bg:nth-child(2) .planet {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 150px;
-    left: 330px;
-    background-image: url("https://cdn-icons-png.flaticon.com/512/5570/5570760.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    animation: rotate 5s linear infinite;
-}
-.bg:nth-child(3) .planet {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 200px;
-    left: 430px;
-    background-image: url("https://cdn-icons-png.flaticon.com/512/4238/4238090.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    animation: rotate 5s linear infinite;
-}
-.bg:nth-child(4) .planet {
-    width: 23px;
-    height: 23px;
-    position: absolute;
-    top: 261px;
-    left: 539px;
-    background-image: url("https://static.vecteezy.com/system/resources/previews/009/375/964/non_2x/mars-planet-or-red-planet-isolated-free-vector.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    animation: rotate 5s linear infinite;
-}
-.bg:nth-child(5) .planet {
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    top: 311px;
-    left: 665px;
-    background-image: url("https://cdn-icons-png.flaticon.com/512/8967/8967202.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    animation: rotate 5s linear infinite;
-}
-.bg:nth-child(6) .planet {
-    width: 55px;
-    height: 55px;
-    position: absolute;
-    top: 421px;
-    left: 870px;
-    background-color: bisque;
-    border-radius: 50%;
-    animation: rotate 5s linear infinite;
-}
-.bg2 {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    animation: rotate 15s linear infinite;
-}
-.moon {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://assets.dryicons.com/uploads/icon/svg/11881/b076f14e-17f0-4cfa-a9ac-5838a45e5890.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 28px;
-    left: 65px;
-    border-radius: 50%;
+    animation: rotate 40s linear infinite;
+    & .planet {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 595px;
+        left: 1230px;
+        background-color: rgb(44, 107, 128);
+        border-radius: 50%;
+    }
 }
 @keyframes rotate {
     0% {
@@ -220,4 +233,7 @@ body {
     100% {
         transform: rotate(360deg);
     }
+}
+.bg1 {
+    animation-play-state: paused;
 }
