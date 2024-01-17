@@ -1,16 +1,44 @@
+* {
+    font-family: 'Consolas', cursive;
+}
 body {
     background-color: rgb(22, 22, 22);
     overflow: hidden;
 }
-button {
+#btn1 {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    width: 50px;
-    height: 50px;
+    margin-bottom: 5px;
+    border-radius: 10%;
+    font-size: 30px;
+    padding: 40px;
+    width: 40px;
+    height: 40px;
     z-index: 20;
+    background-color: white;
+    cursor: pointer;
+}
+#btn:active {
+    transform: scale(0.9);
+}
+#btn2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    font-size: 30px;
+    padding: 40px; 
+    width: 40px;
+    height: 40px;
+    z-index: 20;
+    background-color: white;
+    cursor: pointer;
+}
+#btn:active {
+    transform: scale(0.9);
 }
 .sun {
     width: 150px;
@@ -34,7 +62,7 @@ button {
     top: -315px;
     left: -315px;
     animation: rotate 25s linear infinite;
-    z-index: 1;
+    z-index: -99;
 }
 .rad {
     width: 150px;
@@ -46,7 +74,7 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     filter: blur(10px);
-    z-index: 3;
+    z-index: 1;
 }
 .bg:nth-child(1) {
     width: 250px;
@@ -58,6 +86,8 @@ button {
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 5s linear infinite;
+    animation-play-state: running;
+    z-index: 4;
     & .planet {
         width: 25px;
         height: 25px;
@@ -78,6 +108,7 @@ button {
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 10s linear infinite;
+    z-index: -91;
     & .planet {
         width: 40px;
         height: 40px;
@@ -86,6 +117,7 @@ button {
         left: 330px;
         background-color: #fe9738;
         border-radius: 50%;
+        z-index: -1;
     }
 }
 .bg:nth-child(3) {
@@ -98,6 +130,7 @@ button {
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 15s linear infinite;
+    z-index: -92;
     & .planet {
         width: 40px;
         height: 40px;
@@ -106,6 +139,7 @@ button {
         left: 430px;
         background-color: #89c8fd;
         border-radius: 50%;
+        z-index: -2;
         & .b2 {
             width: 70px;
             height: 70px;
@@ -114,6 +148,7 @@ button {
             top: -15px;
             left: -15px;
             animation: rotate 5s linear infinite;
+            z-index: -93;
             & .moon {
                 width: 15px;
                 height: 15px;
@@ -122,6 +157,7 @@ button {
                 top: 28px;
                 left: 65px;
                 border-radius: 50%;
+                z-index: -3;
             }
         }
     }
@@ -136,6 +172,7 @@ button {
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 20s linear infinite;
+    z-index: -94;
     & .planet {
         width: 23px;
         height: 23px;
@@ -144,6 +181,7 @@ button {
         left: 539px;
         background-color: #b93c28;
         border-radius: 50%;
+        z-index: -4;
     }
 }
 .bg:nth-child(5) {
@@ -156,6 +194,7 @@ button {
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 25s linear infinite;
+    z-index: -95;
     & .planet {
         width: 75px;
         height: 75px;
@@ -164,6 +203,7 @@ button {
         left: 760px;
         background-color: #f7a539;
         border-radius: 50%;
+        z-index: -5;
     }
 }
 .bg:nth-child(6) {
@@ -176,6 +216,7 @@ button {
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 30s linear infinite;
+    z-index: -96;
     & .planet {
         width: 60px;
         height: 60px;
@@ -184,6 +225,7 @@ button {
         left: 957px;
         background-color: bisque;
         border-radius: 50%;
+        z-index: -6;
     }
 }
 .bg:nth-child(7) {
@@ -196,6 +238,7 @@ button {
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: rotate 35s linear infinite;
+    z-index: -97;
     & .planet {
         width: 40px;
         height: 40px;
@@ -204,6 +247,7 @@ button {
         left: 1110px;
         background-color: lightblue;
         border-radius: 50%;
+        z-index: -7;
     }
 }
 .bg:nth-child(8) {
@@ -215,7 +259,8 @@ button {
     background-color: transparent;
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
-    animation: rotate 40s linear infinite;
+    animation: rotate 40s linear infinite;  
+    z-index: -98;
     & .planet {
         width: 40px;
         height: 40px;
@@ -224,6 +269,7 @@ button {
         left: 1230px;
         background-color: rgb(44, 107, 128);
         border-radius: 50%;
+        z-index: -8;
     }
 }
 @keyframes rotate {
@@ -234,6 +280,10 @@ button {
         transform: rotate(360deg);
     }
 }
-.bg1 {
-    animation-play-state: paused;
+.SS {
+    position: relative;
+    margin: 15%;
+}
+#pl:hover {
+    cursor: pointer;
 }
